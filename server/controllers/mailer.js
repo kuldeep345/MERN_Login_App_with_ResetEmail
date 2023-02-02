@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer'
 import Maingen from 'mailgen'
+import ENV from '../config.js'
 
 
 let nodeConfig = {
@@ -7,8 +8,8 @@ let nodeConfig = {
     port: 587,
     secure: false, // true for 465, false for other ports
     auth: {
-      user: "rosemary.dare@ethereal.email", // generated ethereal user
-      pass: "22pQaQvAc8xJufh5UX", // generated ethereal password
+      user: ENV.EMAIL, // generated ethereal user
+      pass: ENV.PASSWORD, // generated ethereal password
     },
   };
 
